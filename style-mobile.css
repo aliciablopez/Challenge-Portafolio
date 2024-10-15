@@ -1,0 +1,54 @@
+/*--- BUENAS PRACTICAS: MOBILE FIRST ---*/
+/*--- Tipografias accesibles: Atkinson. Sarabun y Montesarrat ---*/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*--- Variables CSS ---*/
+:root{
+  --background-body: PowderBlue;
+  --background-heading: MediumAquamarine;
+  --background-main: YellowGreen;
+  --background-section: HoneyDew ;
+  --background-article: MintCream;
+  --background-aside: Cornsilk;
+  --background-nav: LemonChiffon;
+}
+/*--- Contenedores por elemento ---*/
+body {
+  display: flex;
+  flex-flow: row wrap; /*fila sin desborde*/
+  justify-content: space-between; /* los items dentro del contenedor tienen espaciado auto*/
+  background-color:var(--background-body);
+  font-family:"Atkinson+Hyperlegible",sans-serif;
+  box-sizing: border-box;
+  line-height: 1.6;
+  width: 100%;
+  height:70%;
+}
+header, footer{
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  justify-content: space-between; /*experimentar con space-evenly*/
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  margin: auto;
+}
+
+main{
+  text-align: center;
+  padding: 5%;
+}
+
+main img{
+  width: 10rem;
+  height: 10rem;
+  margin: 5%;
+}
+
+main p{
+  margin: 5%;
+}
+
