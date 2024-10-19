@@ -7,48 +7,124 @@
 /*--- Variables CSS ---*/
 :root{
   --background-body: PowderBlue;
-  --background-heading: MediumAquamarine;
-  --background-main: YellowGreen;
+  --background-heading: LightCyan;
+  --background-main: HoneyDew;
   --background-section: HoneyDew ;
   --background-article: MintCream;
   --background-aside: Cornsilk;
   --background-nav: LemonChiffon;
+  --background-cv: mistyrose;
+  --background-papers: blue;
+  --background-blog: yellow;
+
+  --font-family-body: "Atkinson+Hyperlegible",sans-serif;
+  --font-family-heading: "Montserrat",sans-serif;
+  --font-family-main: "Sarabun",sans-serif;
 }
-/*--- Contenedores por elemento ---*/
-body {
-  display: flex;
-  flex-flow: row wrap; /*fila sin desborde*/
-  justify-content: space-between; /* los items dentro del contenedor tienen espaciado auto*/
-  background-color:var(--background-body);
-  font-family:"Atkinson+Hyperlegible",sans-serif;
+
+/*--- Delimitadores globales ---*/
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  line-height: 1.6;
-  width: 100%;
-  height:70%;
-}
-header, footer{
-  display: flex;
-  flex-flow: row wrap;
-  flex-grow: 1;
-  justify-content: space-between; /*experimentar con space-evenly*/
-  align-items: center;
-  width: 100%;
-  height: 15%;
-  margin: auto;
 }
 
-main{
+body{
+  overflow-x: hidden;
+  background-color: var(--background-body);
+  font-family: var(--font-family-body);
+  font-style: normal;
+  font-size: 1rem;
+  width: 100%;
+  height: 70%;
+}
+p{
   text-align: center;
-  padding: 5%;
+  text-decoration: none;
+}
+/*--- Estilos de encabezadps ---*/
+header, div{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: content-box;
+  height: 15%;
+  background-color: var(--background-heading);
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: content-box;
+  height: 15%;
+  background-color: var(--font-family-heading);
+}
+footer a img{
+  width: 100%;
+  height: 100%;
+  margin: 1%;
+}
+h1{
+  font-family: var(--font-family-body);
+  font-weight: 400;
+}
+div{
+  background-color: var(--font-family-heading);
 }
 
+/*--- Estilos del main ---*/
+main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 40%;
+}
 main img{
-  width: 10rem;
-  height: 10rem;
+  width: 20%;
   margin: 5%;
 }
 
-main p{
-  margin: 5%;
+/*--- EStilos de aside ---*/
+aside{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: content-box;
+  background-color: var(--background-aside);
+  height: 30%;
+  margin: 1%;
+  padding: 1%;
+
+}
+
+a{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+  margin:0.5rem;
+  font-family: var(--font-family-heading);
+}
+.cv{
+  background-color: var(--background-cv);
+}
+.papers{
+background-color: var(--background-papers);
+}
+.blog{
+background-color: var(--background-blog);
 }
 
